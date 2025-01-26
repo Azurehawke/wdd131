@@ -1,0 +1,42 @@
+body {
+    background-color: #ebebeb;
+}
+
+h1 {
+    display: flexbox;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: auto;
+    color: white;
+    background-color: #53479d;
+}
+nav {
+    background-color: 53479d;
+    text-align: center;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    padding: 18px 0px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--background-color2);
+}
+
+nav a:active {
+    color: darkslateblue;
+}
