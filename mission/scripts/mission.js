@@ -1,16 +1,24 @@
-const themeSelector = // replace with code to select dropdown element out of the HTML (Hint: document.querySelector)
-function changeTheme() {
-// check to see what the current value of our select is.
-// The current value is conveniently found in themeSelector.value!
+const theme_toggle = document.getElementById('theme');
+const body = document.body;
+const img = document.querySelector('img');
 
-// if the value is dark then:
-// add the dark class to the body
-// change the source of the logo img to point to the white logo.
-// otherwise
-// remove the dark class
-// make sure the logo src is the blue logo.
-}
+function changeTheme(el) {
+// check to see what the current value of our select is.
+    let value = el.value;
+
+    if (value === 'dark') {
+        body.classList.add('dark');
+        img.src = '../mission/images/byui-logo_white.png';
+    }
+    else {
+        body.classList.remove('dark');
+        img.src = '../mission/images/byui-logo_blue.webp';
+    }
+
+};
 
 // add an event listener to the themeSelector element here.
 // Use the changeTheme function as the event handler function.
-themeSelector.addEventListener('change', changeTheme);
+theme_toggle.addEventListener('change', function(el){
+    changeTheme(el.currentTarget);
+});
