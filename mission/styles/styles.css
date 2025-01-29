@@ -26,8 +26,12 @@ h1 {
 h2 {
     font-size: 18px;
     text-align: center;
+    width: 600px;
     color: #3768a8;
     border-bottom: 1px solid#cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
 }
 
 .center {
