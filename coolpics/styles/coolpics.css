@@ -2,6 +2,14 @@ body {
     background-color: #ebebeb;
 }
 
+header {
+    /*
+    apply the bg color to the header so everything nested inside will inherit
+    it as well
+    */
+    background-color: #53479d;
+}
+
 h1 {
     display: flexbox;
     text-align: center;
@@ -10,12 +18,19 @@ h1 {
     padding: 20px;
     width: auto;
     color: white;
-    background-color: #53479d;
 }
+
+
+img {
+    /* confine the image within it's parent container */
+    width: 100%;
+}
+
 nav {
     background-color: 53479d;
     text-align: center;
-    display: none;
+    /* we only want to hide the nav in the middle breakpoint */
+    /* display: none; */
 }
 
 nav ul {
@@ -39,4 +54,43 @@ nav a:hover {
 
 nav a:active {
     color: darkslateblue;
+}
+
+/* apply grid styles to the base mobile view */
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+/*
+override the base styles with media queries so things look good in all
+breakpoints
+*/
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+/* same here */
+@media (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav {
+        display: initial;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
 }

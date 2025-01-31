@@ -11,21 +11,29 @@
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
+        <!--
+        don't forget the button!
+        try styling it to match the mockup
+        -->
+        <button>Menu</button>
+        <!-- the nav can inherit the header styles if it's nested within -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Places</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section>
-            <h2>Current Work</h2>
+        <!--
+        move the subheader out of the section to remove it from consideration
+        for flex columns
+        -->
+        <h2>Current Work</h2>
+        <section class="gallery">
             <figure>
                 <img src="../coolpics/images/norris-sm.jpeg" alt="picture">
             </figure>
@@ -55,6 +63,7 @@
             </figure>
         </section>
     </main>
+    <!-- try styling the footer to match the mockup -->
     <footer>
         <p>©2025 Not a real site 😀</p>
     </footer>
