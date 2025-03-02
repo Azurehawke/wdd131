@@ -1,42 +1,172 @@
 body {
-    background-color: #ebebeb;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e6e6e6; 
 }
 
-h1 {
-    display: flexbox;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: auto;
+header {
+    background-color: #4b3b7b;
     color: white;
-    background-color: #53479d;
-}
-nav {
-    background-color: 53479d;
     text-align: center;
+    padding: 15px 0;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.camera-icon {
+    font-size: 18px;
+}
+
+.menu-button {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hide {
     display: none;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+}
+
+.gallery figure {
     margin: 0;
-    overflow: hidden;
+    background: white;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav a {
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
-    padding: 18px 0px;
-    text-decoration: none;
-    color: #fff;
 }
 
-nav a:hover {
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.viewer img {
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
+}
+
+.close-viewer {
     color: white;
-    background-color: var(--background-color2);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-self: end;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 11;
 }
 
-nav a:active {
-    color: darkslateblue;
+footer {
+    background-color: #4b3b7b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .menu-button {
+        display: none;
+    }
+
+    .navigation {
+        display: block !important;
+    }
+
+    .viewer {
+        padding: 20px;
+    }
+
+    .viewer img {
+        max-height: 85vh;
+        max-width: 85vw;
+    }
 }
