@@ -1,0 +1,16 @@
+#legend {
+}
+
+#participants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#addParticipant {
+  grid-column: 1 / 3;
+}
+
+.hide {
+  display: none;
+}

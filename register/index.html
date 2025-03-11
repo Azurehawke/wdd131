@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <form id="registrationForm">
+        <fieldset>
+            <legend>Adult Information</legend>
+            <label for="adultName">Adult Name:</label>
+            <input type="text" id="adultName" name="adultName" required>
+        </fieldset>
+        <fieldset id="participants">
+            <legend>Participants</legend>
+            <section class="participant1">
+                <label for="fee1">Fee:</label>
+                <input type="number" id="fee1" name="fee1" required>
+            </section>
+            <button type="button" id="addParticipant">Add Participant</button>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="summary" class="hide"></div>
+    <script src="register.js"></script>
+</body>
+</html>
