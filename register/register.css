@@ -1,4 +1,23 @@
-#legend {
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 800px;
+  margin: 16px auto;
+  padding: 0 16px;
+  background-color: steelblue;
+  color: white;
+}
+
+body {
+  display: block;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  padding: 0;
 }
 
 #participants {
