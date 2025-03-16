@@ -139,6 +139,13 @@ h1 {
   display: none;
 }
 
+.no-results {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  padding: 20px;
+}
+
 footer {
   background-color: #f5f5f5;
   padding: 1rem;

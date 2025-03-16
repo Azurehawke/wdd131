@@ -27,31 +27,12 @@
         <section class="search">
             <h2>Find a Recipe!</h2>
             <form>
-                <label for="search-input" class="sr-only">Search for a recipe</label>
-                <input type="text" id="search-input" placeholder="Find a recipe">
-                <button type="submit" aria-label="Search"><span>🔍</span></button>
-            </form>
+                <input type="text" id="search-input" placeholder="Search recipes..." />
+                <button type="submit" id="search-btn">Search</button>
+              </form>
         </section>
 
-        <section class="recipe">
-            <img src="images/apple-crisp.jpg" alt="Apple Crisp with ice cream">
-            <div class="recipe-details">
-                <div class="tags">
-                    <span class="tag">dessert</span>
-                </div>
-                <h2>Apple Crisp</h2>
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p class="description">
-                    This apple crisp recipe is a simple yet delicious fall dessert that’s great served warm with vanilla ice cream.
-                </p>
-            </div>
-        </section>
+        <section id="recipe-output" class="recipe"></section>
     </main>
 
     <footer>
@@ -67,6 +48,6 @@
         </p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
