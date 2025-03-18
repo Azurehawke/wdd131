@@ -36,6 +36,10 @@ Fonts are separated by a | */
   --nav-hover-background-color: var(--primary-color);
 }
 
+li {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
