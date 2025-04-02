@@ -45,6 +45,12 @@ header {
   background-color: var(--header-bg-color);
   text-align: center;
 }
+header img {
+  display: block;
+  width: 10%; /* Scales with the screen */
+  min-width: 100px; /* Prevents it from shrinking below 100px */
+  margin: 0 auto;
+}
 header h1 {
   color: var(--background-color);
   font-size: 24px;
@@ -56,10 +62,6 @@ main {
   padding: 20px;
 }
 /* Navigation styles */
-nav {
-  background-color: var(--footer-bg-color);
-  text-align: center;
-}
 
 nav {
   background-color: var(--footer-bg-color);
@@ -79,8 +81,9 @@ nav a:hover {
   background-color: var(--header-bg-color);
 }
 
-nav a:active {
-  color: var(--footer-bg-color);
+nav .active {
+  color: white;
+  background-color: var(--header-bg-color);
 }
 
 nav.open {
@@ -96,6 +99,7 @@ footer {
   text-align: center;
 }
 
+/* Gallery styles */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
