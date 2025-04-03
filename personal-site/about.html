@@ -10,18 +10,38 @@
     <header>
         <img src="images/logo.webp" alt="Larsen Graphic Designs" width="10%">
         <h1>Larsen Graphic Designs</h1>
-        <!-- <button id="menu" aria-label="Toggle navigation"></button>        -->
-    
         </header>
         <nav class="navigation" aria-hidden="true">
             <a href="../personal-site/index.html">Home</a>
-            <a href="#" class="active">About Me</a>
+            <a href="#" class="active">Hire Me</a>
             <a href="../personal-site/gallery.html">Gallery</a>
             <a href="../personal-site/philosophy.html">Design Philosophy</a>
             <a href="../personal-site/blog.html">Blog</a>
         </nav>
     <main>
-
+        <h2>Reach Out to Me</h2>
+        <form method="get" action="record.html" id="registration-form">
+            <table>
+                <tr>
+                    <td><label for="username">Name:</label></td>
+                    <td><input type="text" id="username" name="username" required placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td>
+                        <input type="email" id="email" name="email" 
+                               pattern="[a-zA-Z0-9._%+-]+@byui\.edu" required 
+                               title="A valid byui.edu email address"
+                               placeholder="e.g., username@byui.edu">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </main>
     <footer>
         <p>Copyright 2005 Steve Larsen | Larsen Graphic Designs</p>

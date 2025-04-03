@@ -1,21 +1,10 @@
 /* Define CSS variables for colors */
 :root {
-  --header-bg-color: #133c55ff; /* Light gray for header */
-  --footer-bg-color: #84d2f6ff; /* Light gray for footer */
-  --grid-item-bg-color: #386fa4ff; /* Darker gray for grid item background */
-  --text-color: #000000; /* Black for text */
-  --background-color: #ffffff; /* White for main background */
-}
-
-/* Hero image styles */
-.hero-image {
-  width: 100%; /* Full width of the screen */
-  height: 300px; /* Fixed height to show only 700px of the image */
-  background-image: url("/personal-site/images/gallery-02.png"); /* Replace with your image path */
-  background-size: cover; /* Ensures the image scales to cover the area */
-  background-position: center top; /* Starts from the top center of the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  background-attachment: scroll; /* Scrolls with the page (default behavior) */
+  --header-bg-color: #133c55ff;
+  --footer-bg-color: #84d2f6ff;
+  --grid-item-bg-color: #386fa4ff;
+  --text-color: #000000;
+  --background-color: #ffffff;
 }
 
 /* Reset default margins and padding */
@@ -77,19 +66,61 @@ nav a {
 }
 
 nav a:hover {
-  color: white;
+  color: var(--background-color);
   background-color: var(--header-bg-color);
 }
 
 nav .active {
-  color: white;
+  color: var(--background-color);
   background-color: var(--header-bg-color);
 }
 
 nav.open {
   display: block;
 }
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
 
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="range"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--header-bg-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="range"] {
+  width: 80%;
+}
+
+button {
+  background-color: var(--header-bg-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  display: none;
+}
 /* Footer styles */
 
 footer {
@@ -110,7 +141,7 @@ footer {
 
 .gallery figure {
   margin: 0;
-  background: white;
+  background: var(--background-color);
   padding: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -144,7 +175,7 @@ footer {
 }
 
 .close-viewer {
-  color: white;
+  color: var(--background-color);
   font-size: 24px;
   background: none;
   border: none;
